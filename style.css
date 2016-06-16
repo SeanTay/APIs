@@ -41,6 +41,8 @@ form h1 {
 img{
   margin: 20px 50px 20px 50px;
   display: inline-block;
+  border-radius: 10%;
+
 }
 
 .info {

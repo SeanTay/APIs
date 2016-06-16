@@ -11,20 +11,20 @@ $(document).ready( function() {
       type: "GET",
       dataType: "json"
     }).done(function(response){
-      console.log(response)
-      var imgURL = "<img src=" + response["Poster"] + "></img> <br>";
-      var title = "<h3> Title: " + response["Title"] + "</h3> <br>";
-      var actors = "<h3> Actors: " + response["Actors"] + "</h3> <br>";
-      var plot = "<h3> Plot: " + response ["Plot"] + "</h3>";
-      // $("#main-content").css("background-image","url('" + imgURL +"')")
-      // $("img").attr("src",imgURL);
-      $(".img").empty();
-      $(imgURL).appendTo($(".img"));
+          console.log(response)
+          var imgURL = "<img src=" + response.Poster + "></img> <br>";
+          var title = "<h3> Title: " + response["Title"] + "</h3> <br>";
+          var actors = "<h3> Actors: " + response["Actors"] + "</h3> <br>";
+          var plot = "<h3> Plot: " + response ["Plot"] + "</h3>";
+          // $("#main-content").css("background-image","url('" + imgURL +"')")
+          // $("img").attr("src",imgURL);
+          $(".img").empty();
+          $(imgURL).appendTo($(".img"));
 
-      $(".info").empty();
-      $(title).appendTo($(".info"));
-      $(actors).appendTo($(".info"));
-      $(plot).appendTo($(".info"));
+          $(".info").empty();
+          $(title).appendTo($(".info"));
+          $(actors).appendTo($(".info"));
+          $(plot).appendTo($(".info"));
 
     }).fail(function(response){
       console.log("FAIL" + response);
